@@ -213,7 +213,11 @@ ul {
 .avatar-wrapper {
   position: absolute;
   top: -165px;
-  right: -20px;
+
+  /* center horizontally */
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%); 
 
   width: 155px;
   height: 155px;
