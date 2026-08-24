@@ -129,16 +129,24 @@ ul {
   -webkit-mask-image: radial-gradient(
     circle 180px at var(--mouse-x) var(--mouse-y),
     black 0%,
-    rgba(0,0,0,.8) 30%,
+    rgba(0, 0, 0, 0.8) 30%,
     transparent 75%
   );
 
   mask-image: radial-gradient(
     circle 180px at var(--mouse-x) var(--mouse-y),
     black 0%,
-    rgba(0,0,0,.8) 30%,
+    rgba(0, 0, 0, 0.8) 30%,
     transparent 75%
   );
+}
+
+
+/* MOBILE - hide petroglyphs */
+@media (max-width: 800px) {
+  .ancient-symbols {
+    display: none !important;
+  }
 }
 .container {
   width: min(calc(100% - 40px), var(--container));
