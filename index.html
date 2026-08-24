@@ -3,288 +3,1915 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gansumiya Tsedevsuren portfolio - Data Engineer, System Engineer, Backend Developer, AI Agent Developer" />
-  <title>Gansumiya Tsedevsuren | Portfolio</title>
+
+  <meta
+    name="description"
+    content="Gansumiya Tsedevsuren - Data Engineer, Backend Developer, System Engineer and AI Automation Developer."
+  />
+
+  <meta
+    name="keywords"
+    content="Data Engineer, Backend Developer, AI Engineer, Kafka, Kubernetes, Oracle, Python, Node.js, Telecom"
+  />
+
+  <meta name="author" content="Gansumiya Tsedevsuren" />
+
+  <title>Gansumiya Tsedevsuren | Data × Backend × AI</title>
+
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="#home" class="logo">GANSUMIYA TSEDEVSUREN</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+  <!-- ======================================================
+       BACKGROUND EFFECTS
+  ======================================================= -->
+
+  <div class="background-grid"></div>
+
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+
+  <div id="cursor-glow"></div>
+
+
+  <!-- ======================================================
+       NAVBAR
+  ======================================================= -->
+
+  <header class="navbar">
+
+    <div class="container nav-container">
+
+      <a href="#home" class="logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span>Gansumiya</span>
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#skills">
+          Stack
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </nav>
+
+      <div class="nav-actions">
+
+        <a
+          href="https://github.com/gansumiya-ts"
+          target="_blank"
+          class="nav-icon"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/gansumiya-tsedevsuren/"
+          target="_blank"
+          class="nav-icon"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <button id="mobile-menu-button" class="mobile-menu-button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+
     </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+
+      <a href="#about">About</a>
+      <a href="#skills">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
   </header>
 
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">Data Engineer • System Engineer • Backend Developer • AI Agent Developer</p>
-        <h1>Building reliable data, backend, automation, and AI agent systems</h1>
-        <p class="lead">
-          I'm Gansumiya Tsedevsuren. I build reliable data pipelines, backend services,
-          telecom system integrations, automation tools, and AI-powered agent systems.
-          My work includes Oracle DB, Python, Kafka, Kubernetes, Redis, Couchbase, and production support.
-        </p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="#contact">Contact Me</a>
-        </div>
-      </div>
+  <!-- ======================================================
+       HERO
+  ======================================================= -->
 
-      <aside class="hero-card">
-        <div class="stat">
-          <span class="stat-number">5+</span>
-          <span class="stat-label">Years of engineering experience</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Core tools and technologies</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">24/7</span>
-          <span class="stat-label">Production support mindset</span>
-        </div>
-      </aside>
-    </div>
-  </section>
+  <main>
 
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-tag">About</p>
-        <h2>About Me</h2>
-      </div>
+    <section id="home" class="hero">
 
-      <div class="card about-card">
-        <p>
-          I am an engineer with experience in data engineering, backend development,
-          API integrations, and system operations. I work on designing and maintaining
-          data pipelines, debugging production issues, integrating internal services,
-          and improving system reliability.
-        </p>
-        <p>
-          I also design and build AI-powered agents and automation systems that analyze data,
-          generate insights, and support decision-making in real-time environments.
-        </p>
-        <p>
-          I have hands-on experience with Oracle Database, Python, Java, Kafka,
-          Kubernetes, Redis, Couchbase, and monitoring/reporting tools such as Kibana,
-          Tableau, and Power BI. I enjoy solving real production problems, optimizing
-          workflows, and building stable, scalable systems.
-        </p>
-      </div>
-    </div>
-  </section>
+      <div class="container hero-container">
 
-  <section id="skills" class="section alt">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-tag">Skills</p>
-        <h2>Technical Skills</h2>
-      </div>
+        <div class="hero-content">
 
-      <div class="skills-grid">
-        <div class="card">
-          <h3>Languages</h3>
-          <div class="badges">
-            <span>Python</span>
-            <span>Java</span>
-            <span>SQL</span>
-            <span>JavaScript</span>
+          <div class="availability-badge">
+
+            <span class="availability-dot"></span>
+
+            Currently building intelligent systems
+
           </div>
-        </div>
 
-        <div class="card">
-          <h3>Backend & APIs</h3>
-          <div class="badges">
-            <span>FastAPI</span>
-            <span>Flask</span>
-            <span>REST API</span>
-            <span>Node.js</span>
-            <span>Express</span>
-          </div>
-        </div>
 
-        <div class="card">
-          <h3>Data & Databases</h3>
-          <div class="badges">
-            <span>Oracle DB</span>
-            <span>PL/SQL</span>
-            <span>Redis</span>
-            <span>Couchbase</span>
-            <span>ETL Pipelines</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Infrastructure & Tools</h3>
-          <div class="badges">
-            <span>Kubernetes</span>
-            <span>Kafka</span>
-            <span>Linux</span>
-            <span>PM2</span>
-            <span>Git</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Analytics & Monitoring</h3>
-          <div class="badges">
-            <span>Power BI</span>
-            <span>Tableau</span>
-            <span>Kibana</span>
-            <span>Log Analysis</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Special Focus</h3>
-          <div class="badges">
-            <span>Automation</span>
-            <span>Real-time Systems</span>
-            <span>AI Integrations</span>
-            <span>AI Agents</span>
-            <span>Automation Systems</span>
-            <span>Production Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-tag">Experience</p>
-        <h2>Professional Experience</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item card">
-          <div class="timeline-head">
-            <h3>Engineer – Telecom Systems</h3>
-            <span>2021 – Present</span>
-          </div>
-          <ul>
-            <li>Built and maintained data pipelines for telecom-related systems.</li>
-            <li>Worked with Oracle DB, Python, and Java for ETL and backend processes.</li>
-            <li>Integrated internal and external APIs for system communication.</li>
-            <li>Troubleshot production issues across Kafka, Redis, Couchbase, and Kubernetes environments.</li>
-            <li>Improved system reliability through debugging, monitoring, and optimization.</li>
-            <li>Supported deployments, SIT validation, and production incident resolution.</li>
-            <li>Created reports and dashboards for business and operational visibility.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section alt">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-tag">Projects</p>
-        <h2>Featured Projects</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="card project-card">
-          <h3>Telecom Data Pipeline Automation</h3>
-          <p>
-            Built automated data processing workflows using Python, Oracle DB, and scheduled jobs
-            to move, validate, and transform large-scale telecom data.
+          <p class="hero-overline">
+            DATA × BACKEND × AI × AUTOMATION
           </p>
-          <div class="project-meta"><strong>Tech:</strong> Python, Oracle DB, SQL, Linux</div>
-          <div class="project-impact">Impact: Reduced manual work, improved processing speed, and increased data accuracy.</div>
-        </article>
 
-        <article class="card project-card">
-          <h3>Kafka-Based Event Processing Service</h3>
-          <p>
-            Developed and maintained backend services that consumed and produced Kafka events
-            for telecom business flows and customer actions.
+
+          <h1 class="hero-title">
+
+            I engineer systems that
+
+            <span class="gradient-text">
+              move data,
+            </span>
+
+            automate work &
+
+            <span class="gradient-text">
+              think smarter.
+            </span>
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            Data Engineer, System Engineer and Backend Developer focused on
+            real-time telecom platforms, automation, APIs, event-driven
+            architecture and AI-powered systems.
+
           </p>
-          <div class="project-meta"><strong>Tech:</strong> Java, Python, Kafka, REST API</div>
-          <div class="project-impact">Impact: Enabled real-time event-driven processing and improved integration between systems.</div>
-        </article>
 
-        <article class="card project-card">
-          <h3>Recommendation / API Service</h3>
-          <p>
-            Built API-based services with Redis integration for fast data retrieval
-            and business-facing use cases.
-          </p>
-          <div class="project-meta"><strong>Tech:</strong> Python, Node.js, Redis, REST API</div>
-          <div class="project-impact">Impact: Improved response time and supported scalable service behavior.</div>
-        </article>
 
-        <article class="card project-card">
-          <h3>Production Support & System Reliability</h3>
-          <p>
-            Investigated and resolved production issues across Kubernetes, Couchbase, Kafka,
-            and backend services with focus on deployment validation and system performance.
-          </p>
-          <div class="project-meta"><strong>Tech:</strong> Kubernetes, Kafka, Couchbase, Linux, Kibana</div>
-          <div class="project-impact">Impact: Reduced downtime, fixed critical issues, and improved production stability.</div>
-        </article>
+          <div class="hero-actions">
 
-        <article class="card project-card featured">
-          <span class="featured-badge">Featured</span>
-          <h3>AI Trading Agent & Automation System</h3>
-          <p>
-            Built an AI-powered trading agent that analyzes market data, generates insights,
-            detects patterns, and provides real-time signals through an automated decision-support system.
-          </p>
-          <div class="project-meta"><strong>Tech:</strong> Python, FastAPI, Redis, WebSocket, REST API, AI Integration</div>
-          <div class="project-impact">Impact: Delivered faster trading insights, reduced manual analysis effort, and supported automation-focused decision workflows.</div>
-        </article>
+            <a href="#projects" class="button button-primary">
 
-        <article class="card project-card">
-          <h3>AI Agent Automation Platform</h3>
-          <p>
-            Designed and developed AI agents that automate data analysis, decision workflows,
-            and real-time processing using backend services and intelligent logic.
-          </p>
-          <div class="project-meta"><strong>Tech:</strong> Python, FastAPI, AI Integration, Redis, Kafka</div>
-          <div class="project-impact">Impact: Automated complex workflows and improved efficiency in data-driven systems.</div>
-        </article>
-      </div>
-    </div>
-  </section>
+              Explore my work
 
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-tag">Contact</p>
-        <h2>Let’s Work Together</h2>
-      </div>
+              <i class="fa-solid fa-arrow-down"></i>
 
-      <div class="card contact-card">
-        <div class="contact-list">
-          <a href="mailto:gansumiyatsedevsuren@gmail.com">Send Email</a>
-          <a href="https://www.linkedin.com/in/gansumiya-tsedevsuren/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-          <a href="https://github.com/gansumiya-ts" target="_blank" rel="noreferrer">GitHub Profile</a>
-          <span>Phone: +976 86118340</span>
+            </a>
+
+
+            <a
+              href="mailto:gansumiyatsedevsuren@gmail.com"
+              class="button button-secondary"
+            >
+
+              Let's talk
+
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+          </div>
+
+
+          <div class="hero-social">
+
+            <span>Find me</span>
+
+            <div class="hero-social-line"></div>
+
+            <a
+              href="https://github.com/gansumiya-ts"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/gansumiya-tsedevsuren/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+          </div>
+
         </div>
+
+
+        <!-- HERO TERMINAL -->
+
+        <div class="hero-visual">
+
+          <div class="terminal-card glass-card">
+
+            <div class="terminal-header">
+
+              <div class="terminal-buttons">
+
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+
+              </div>
+
+              <span class="terminal-title">
+                engineer@production
+              </span>
+
+              <i class="fa-solid fa-code"></i>
+
+            </div>
+
+
+            <div class="terminal-body">
+
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span>whoami</span>
+              </div>
+
+              <div class="terminal-output">
+                Gansumiya Tsedevsuren
+              </div>
+
+
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span>cat role.txt</span>
+              </div>
+
+              <div class="terminal-output">
+                Data Engineer
+              </div>
+
+              <div class="terminal-output">
+                Backend Developer
+              </div>
+
+              <div class="terminal-output">
+                System Engineer
+              </div>
+
+              <div class="terminal-output">
+                AI Automation Developer
+              </div>
+
+
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span>systemctl status skills</span>
+              </div>
+
+
+              <div class="terminal-status">
+
+                <span>
+                  ● Oracle
+                </span>
+
+                <span>
+                  ● Kafka
+                </span>
+
+                <span>
+                  ● Kubernetes
+                </span>
+
+                <span>
+                  ● Python
+                </span>
+
+                <span>
+                  ● Redis
+                </span>
+
+                <span>
+                  ● Node.js
+                </span>
+
+              </div>
+
+
+              <div class="terminal-line terminal-current">
+
+                <span class="terminal-prompt">$</span>
+
+                <span id="terminal-text">
+                  building scalable systems
+                </span>
+
+                <span class="terminal-cursor"></span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="floating-chip chip-one">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            Real-time
+
+          </div>
+
+
+          <div class="floating-chip chip-two">
+
+            <i class="fa-solid fa-robot"></i>
+
+            AI Agents
+
+          </div>
+
+
+          <div class="floating-chip chip-three">
+
+            <i class="fa-solid fa-database"></i>
+
+            Data
+
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </section>
+
+    </section>
+
+
+    <!-- ======================================================
+         TECH MARQUEE
+    ======================================================= -->
+
+    <section class="tech-strip">
+
+      <div class="tech-marquee">
+
+        <div class="tech-track">
+
+          <span>PYTHON</span>
+          <span>ORACLE</span>
+          <span>KAFKA</span>
+          <span>KUBERNETES</span>
+          <span>REDIS</span>
+          <span>COUCHBASE</span>
+          <span>NODE.JS</span>
+          <span>FASTAPI</span>
+          <span>LINUX</span>
+          <span>DOCKER</span>
+          <span>REST API</span>
+          <span>PL/SQL</span>
+
+          <!-- Repeat for animation -->
+
+          <span>PYTHON</span>
+          <span>ORACLE</span>
+          <span>KAFKA</span>
+          <span>KUBERNETES</span>
+          <span>REDIS</span>
+          <span>COUCHBASE</span>
+          <span>NODE.JS</span>
+          <span>FASTAPI</span>
+          <span>LINUX</span>
+          <span>DOCKER</span>
+          <span>REST API</span>
+          <span>PL/SQL</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         ABOUT
+    ======================================================= -->
+
+    <section id="about" class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <span class="section-number">
+              01.
+            </span>
+
+            <p class="section-label">
+              WHO I AM
+            </p>
+
+          </div>
+
+
+          <h2>
+            Engineer by role.
+            <span class="muted-text">
+              Builder by mindset.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="about-layout">
+
+          <div class="about-main glass-card reveal">
+
+            <p class="about-big-text">
+
+              I build systems behind the scenes that make
+
+              <span class="gradient-text">
+                data move faster,
+              </span>
+
+              services communicate reliably and repetitive work disappear.
+
+            </p>
+
+
+            <p>
+
+              My background combines data engineering, backend development,
+              telecom platforms and system operations.
+
+              I work with complex production environments where APIs,
+              databases, streaming platforms and distributed services need
+              to work reliably together.
+
+            </p>
+
+
+            <p>
+
+              Beyond traditional engineering, I also build AI-powered agents
+              and automation platforms capable of analyzing information,
+              automating workflows and supporting faster decisions.
+
+            </p>
+
+          </div>
+
+
+          <div class="about-side">
+
+            <div class="stat-card glass-card reveal">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+
+              <div>
+
+                <h3>
+                  Real-time Systems
+                </h3>
+
+                <p>
+                  Event-driven integrations and streaming workflows.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="stat-card glass-card reveal">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-gears"></i>
+              </div>
+
+              <div>
+
+                <h3>
+                  Automation First
+                </h3>
+
+                <p>
+                  Eliminating repetitive engineering and operational tasks.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="stat-card glass-card reveal">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+
+              <div>
+
+                <h3>
+                  Production Mindset
+                </h3>
+
+                <p>
+                  Reliability, monitoring, debugging and system stability.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         SKILLS
+    ======================================================= -->
+
+    <section id="skills" class="section section-dark">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <span class="section-number">
+              02.
+            </span>
+
+            <p class="section-label">
+              MY STACK
+            </p>
+
+          </div>
+
+
+          <h2>
+            Tools I use to
+            <span class="gradient-text">
+              ship systems.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="skills-bento">
+
+
+          <!-- DATA -->
+
+          <article class="skill-card skill-large glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-database"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              01
+            </span>
+
+
+            <h3>
+              Data Engineering
+            </h3>
+
+
+            <p>
+
+              Designing, transforming and operating high-volume data
+              pipelines across production systems.
+
+            </p>
+
+
+            <div class="skill-tags">
+
+              <span>Oracle DB</span>
+              <span>SQL</span>
+              <span>PL/SQL</span>
+              <span>ETL</span>
+              <span>Data Pipelines</span>
+              <span>Data Validation</span>
+              <span>Batch Processing</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- BACKEND -->
+
+          <article class="skill-card glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-code"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              02
+            </span>
+
+
+            <h3>
+              Backend
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>Python</span>
+              <span>Java</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>FastAPI</span>
+              <span>Flask</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- STREAMING -->
+
+          <article class="skill-card glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-wave-square"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              03
+            </span>
+
+
+            <h3>
+              Event Streaming
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>Kafka</span>
+              <span>Consumers</span>
+              <span>Producers</span>
+              <span>Event Processing</span>
+              <span>Real-time Systems</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- CLOUD / INFRA -->
+
+          <article class="skill-card glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-server"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              04
+            </span>
+
+
+            <h3>
+              Infrastructure
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>Linux</span>
+              <span>Kubernetes</span>
+              <span>Docker</span>
+              <span>PM2</span>
+              <span>Shell Script</span>
+              <span>Cron</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- DATABASE -->
+
+          <article class="skill-card glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-hard-drive"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              05
+            </span>
+
+
+            <h3>
+              Data Stores
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>Oracle</span>
+              <span>Redis</span>
+              <span>Couchbase</span>
+              <span>MongoDB</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- AI -->
+
+          <article class="skill-card skill-large glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              06
+            </span>
+
+
+            <h3>
+              AI & Automation
+            </h3>
+
+
+            <p>
+
+              Building AI-driven tools and agents that analyze information,
+              automate workflows and connect intelligence with backend
+              systems.
+
+            </p>
+
+
+            <div class="skill-tags">
+
+              <span>AI Agents</span>
+              <span>LLM Integration</span>
+              <span>Automation</span>
+              <span>Prompt Engineering</span>
+              <span>Decision Systems</span>
+              <span>WebSocket</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- APIs -->
+
+          <article class="skill-card glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-plug"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              07
+            </span>
+
+
+            <h3>
+              APIs & Integrations
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>REST API</span>
+              <span>Webhooks</span>
+              <span>JSON</span>
+              <span>OAuth</span>
+              <span>Bearer Auth</span>
+              <span>Internal APIs</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- OBSERVABILITY -->
+
+          <article class="skill-card glass-card reveal">
+
+            <div class="skill-card-icon">
+
+              <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+
+            <span class="skill-index">
+              08
+            </span>
+
+
+            <h3>
+              Observability
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>Kibana</span>
+              <span>Log Analysis</span>
+              <span>Monitoring</span>
+              <span>Power BI</span>
+              <span>Tableau</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         EXPERIENCE
+    ======================================================= -->
+
+    <section id="experience" class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <span class="section-number">
+              03.
+            </span>
+
+            <p class="section-label">
+              EXPERIENCE
+            </p>
+
+          </div>
+
+
+          <h2>
+            Working where
+            <span class="gradient-text">
+              data meets production.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="experience-timeline">
+
+
+          <article class="experience-item reveal">
+
+            <div class="experience-marker">
+
+              <span></span>
+
+            </div>
+
+
+            <div class="experience-date">
+
+              2021 — PRESENT
+
+            </div>
+
+
+            <div class="experience-content glass-card">
+
+              <div class="experience-top">
+
+                <div>
+
+                  <p class="experience-company">
+                    TELECOM / DIGITAL SYSTEMS
+                  </p>
+
+                  <h3>
+                    Data & System Engineer
+                  </h3>
+
+                </div>
+
+
+                <span class="experience-type">
+                  Production
+                </span>
+
+              </div>
+
+
+              <p>
+
+                Engineering and supporting large-scale telecom data
+                platforms, recommendation systems, backend integrations and
+                production automation.
+
+              </p>
+
+
+              <div class="experience-points">
+
+                <div>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                  Built and maintained ETL and batch processing pipelines.
+
+                </div>
+
+
+                <div>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                  Developed backend services and API integrations.
+
+                </div>
+
+
+                <div>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                  Implemented Kafka consumers and event-driven workflows.
+
+                </div>
+
+
+                <div>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                  Supported Kubernetes-based production services.
+
+                </div>
+
+
+                <div>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                  Automated monitoring and operational reporting.
+
+                </div>
+
+
+                <div>
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                  Debugged distributed systems across database, API and
+                  streaming layers.
+
+                </div>
+
+              </div>
+
+
+              <div class="experience-stack">
+
+                <span>Oracle</span>
+                <span>Python</span>
+                <span>Kafka</span>
+                <span>Kubernetes</span>
+                <span>Redis</span>
+                <span>Couchbase</span>
+                <span>Linux</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         PROJECTS
+    ======================================================= -->
+
+    <section id="projects" class="section section-dark">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <span class="section-number">
+              04.
+            </span>
+
+            <p class="section-label">
+              SELECTED WORK
+            </p>
+
+          </div>
+
+
+          <h2>
+
+            Things I've
+
+            <span class="gradient-text">
+              engineered.
+            </span>
+
+          </h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 01 -->
+
+          <article class="project-card project-featured glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                01
+              </div>
+
+
+              <div class="project-badges">
+
+                <span class="project-badge featured">
+                  FEATURED
+                </span>
+
+                <span class="project-status">
+                  ● LIVE
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="project-icon-large">
+
+              <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              AI / AUTOMATION
+
+            </p>
+
+
+            <h3>
+
+              AI Trading Agent
+
+            </h3>
+
+
+            <p class="project-description">
+
+              AI-powered agent architecture built to analyze market
+              information, process signals, identify patterns and support
+              automated decision workflows.
+
+            </p>
+
+
+            <div class="project-split">
+
+              <div>
+
+                <span class="project-label">
+                  BUILT
+                </span>
+
+                <p>
+
+                  Real-time market analysis, backend APIs, caching,
+                  WebSockets and intelligent automation logic.
+
+                </p>
+
+              </div>
+
+
+              <div>
+
+                <span class="project-label">
+                  IMPACT
+                </span>
+
+                <p>
+
+                  Reduced manual analysis and enabled faster automated
+                  insight generation.
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="project-tech">
+
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>Redis</span>
+              <span>WebSocket</span>
+              <span>AI</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 02 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                02
+              </div>
+
+              <i class="fa-solid fa-tower-broadcast project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              STREAMING / BACKEND
+
+            </p>
+
+
+            <h3>
+
+              Kafka Event Processing Platform
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Backend service consuming business events from Kafka,
+              filtering payloads and triggering downstream APIs and customer
+              workflows in real time.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Kafka</span>
+              <span>Node.js</span>
+              <span>REST API</span>
+              <span>JSON</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 03 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                03
+              </div>
+
+              <i class="fa-solid fa-database project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              DATA ENGINEERING
+
+            </p>
+
+
+            <h3>
+
+              Telecom Data Pipeline Automation
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Automated data ingestion, validation, transformation and
+              delivery pipelines handling high-volume telecom datasets.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Python</span>
+              <span>Oracle</span>
+              <span>SQL</span>
+              <span>Linux</span>
+              <span>Cron</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 04 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                04
+              </div>
+
+              <i class="fa-solid fa-phone-volume project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              TELECOM / CDR
+
+            </p>
+
+
+            <h3>
+
+              Automated CDR Processing
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Linux-based automation for filtering, validating, renaming and
+              preparing telecom call-detail records for downstream data
+              pipelines.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Bash</span>
+              <span>AWK</span>
+              <span>Linux</span>
+              <span>ETL</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 05 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                05
+              </div>
+
+              <i class="fa-solid fa-chart-simple project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              AUTOMATION / OPS
+
+            </p>
+
+
+            <h3>
+
+              Production Monitoring Automation
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Automated operational reporting across messaging queues,
+              Redis, filesystem capacity, source data validation and
+              processing failures.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Python</span>
+              <span>Linux</span>
+              <span>ActiveMQ</span>
+              <span>Redis</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 06 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                06
+              </div>
+
+              <i class="fa-solid fa-plug-circle-bolt project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              API / INTEGRATION
+
+            </p>
+
+
+            <h3>
+
+              Cross-Service API Platform
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Backend API layer exposing internal service capabilities
+              through structured public endpoints with database-backed
+              campaign and offer information.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>Oracle</span>
+              <span>REST</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 07 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                07
+              </div>
+
+              <i class="fa-solid fa-diagram-project project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              RECOMMENDATION
+
+            </p>
+
+
+            <h3>
+
+              Telecom Recommendation Engine
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Customer recommendation flows based on usage behavior,
+              transactional events, segmentation rules and real-time
+              customer indicators.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Oracle</span>
+              <span>Kafka</span>
+              <span>Redis</span>
+              <span>Java</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 08 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                08
+              </div>
+
+              <i class="fa-solid fa-gift project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              EVENT INTEGRATION
+
+            </p>
+
+
+            <h3>
+
+              Event → Campaign Integration
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Real-time backend workflow connecting customer order events
+              with campaign platforms and downstream benefit services.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Kafka</span>
+              <span>Node.js</span>
+              <span>API</span>
+              <span>PM2</span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 09 -->
+
+          <article class="project-card glass-card reveal">
+
+            <div class="project-top">
+
+              <div class="project-number">
+                09
+              </div>
+
+              <i class="fa-solid fa-robot project-small-icon"></i>
+
+            </div>
+
+
+            <p class="project-category">
+
+              AI SYSTEMS
+
+            </p>
+
+
+            <h3>
+
+              AI Agent Automation Platform
+
+            </h3>
+
+
+            <p class="project-description">
+
+              Intelligent backend agents designed to combine data,
+              automation logic and APIs to execute multi-step digital
+              workflows.
+
+            </p>
+
+
+            <div class="project-tech">
+
+              <span>Python</span>
+              <span>AI</span>
+              <span>FastAPI</span>
+              <span>Redis</span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         ENGINEERING PHILOSOPHY
+    ======================================================= -->
+
+    <section class="section philosophy-section">
+
+      <div class="container">
+
+        <div class="philosophy-card glass-card reveal">
+
+          <div class="quote-symbol">
+            “
+          </div>
+
+
+          <p>
+
+            Good engineering isn't only about making something
+
+            <span class="gradient-text">
+              work.
+            </span>
+
+            It's making it observable, maintainable, scalable and reliable
+            when nobody is watching.
+
+          </p>
+
+
+          <span class="quote-author">
+            — My engineering philosophy
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         CURRENTLY BUILDING
+    ======================================================= -->
+
+    <section class="section section-dark">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <span class="section-number">
+              05.
+            </span>
+
+            <p class="section-label">
+              CURRENTLY
+            </p>
+
+          </div>
+
+
+          <h2>
+
+            What I'm
+
+            <span class="gradient-text">
+              exploring now.
+            </span>
+
+          </h2>
+
+        </div>
+
+
+        <div class="currently-grid">
+
+
+          <div class="currently-card glass-card reveal">
+
+            <span class="currently-icon">
+              01
+            </span>
+
+            <h3>
+              AI Agents
+            </h3>
+
+            <p>
+
+              Building agents capable of working with APIs, structured data
+              and automated workflows.
+
+            </p>
+
+          </div>
+
+
+          <div class="currently-card glass-card reveal">
+
+            <span class="currently-icon">
+              02
+            </span>
+
+            <h3>
+              Intelligent Automation
+            </h3>
+
+            <p>
+
+              Combining backend systems with AI to reduce manual operational
+              work.
+
+            </p>
+
+          </div>
+
+
+          <div class="currently-card glass-card reveal">
+
+            <span class="currently-icon">
+              03
+            </span>
+
+            <h3>
+              Real-time Architecture
+            </h3>
+
+            <p>
+
+              Exploring scalable event-driven architecture for high-volume
+              systems.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         CONTACT
+    ======================================================= -->
+
+    <section id="contact" class="section contact-section">
+
+      <div class="container">
+
+        <div class="contact-box glass-card reveal">
+
+
+          <div class="contact-status">
+
+            <span></span>
+
+            OPEN TO INTERESTING PROJECTS
+
+          </div>
+
+
+          <p class="contact-small">
+
+            HAVE SOMETHING IN MIND?
+
+          </p>
+
+
+          <h2>
+
+            Let's build something
+
+            <span class="gradient-text">
+              cool.
+            </span>
+
+          </h2>
+
+
+          <p class="contact-description">
+
+            Whether it's data engineering, backend architecture, automation,
+            real-time systems or AI agents — feel free to reach out.
+
+          </p>
+
+
+          <a
+            href="mailto:gansumiyatsedevsuren@gmail.com"
+            class="contact-email"
+          >
+
+            gansumiyatsedevsuren@gmail.com
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+          </a>
+
+
+          <div class="contact-links">
+
+
+            <a
+              href="https://github.com/gansumiya-ts"
+              target="_blank"
+            >
+
+              <i class="fa-brands fa-github"></i>
+
+              GitHub
+
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/gansumiya-tsedevsuren/"
+              target="_blank"
+            >
+
+              <i class="fa-brands fa-linkedin"></i>
+
+              LinkedIn
+
+            </a>
+
+
+            <a href="tel:+97686118340">
+
+              <i class="fa-solid fa-phone"></i>
+
+              +976 86118340
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
 
   <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Gansumiya Tsedevsuren. All rights reserved.</p>
+
+    <div class="container footer-container">
+
+      <div>
+
+        <span class="logo-symbol">
+          &lt;/&gt;
+        </span>
+
+        Gansumiya Tsedevsuren
+
+      </div>
+
+
+      <p>
+
+        Designed & engineered with
+
+        <i class="fa-solid fa-heart"></i>
+
+        <span id="year"></span>
+
+      </p>
+
+
+      <a href="#home" class="back-top">
+
+        Back to top
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+      </a>
+
     </div>
+
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
