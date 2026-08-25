@@ -21,12 +21,6 @@ Just open `index.html` in your browser.
 5. Save.
 6. Your site will be published on a GitHub Pages URL.
 
-## Before publishing
-Update these values inside `index.html`:
-- `your-email@example.com`
-- LinkedIn URL
-- GitHub URL
-
 ## Suggested repo name
 - `portfolio`
 - `gansumiya-portfolio`
