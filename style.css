@@ -21,20 +21,20 @@ body {
 
   font-family: "Inter", sans-serif;
 
-  color: #f7f8ff;
+  color: var(--text);
 
   background:
     radial-gradient(
-      circle at 70% 15%,
-      rgba(96, 92, 255, 0.13),
-      transparent 30%
+      circle at 75% 10%,
+      rgba(255, 255, 255, 0.035),
+      transparent 35%
     ),
     radial-gradient(
-      circle at 10% 40%,
-      rgba(0, 238, 255, 0.08),
-      transparent 25%
+      circle at 15% 60%,
+      rgba(130, 150, 195, 0.045),
+      transparent 30%
     ),
-    #070a14;
+    var(--bg);
 }
 
 body.menu-open {
@@ -68,7 +68,7 @@ ul {
 }
 
 ::selection {
-  background: #7c6cff;
+  background: #ff9f43;
   color: white;
 }
 
@@ -78,31 +78,30 @@ ul {
 ========================================================= */
 
 :root {
-  --bg: #070a14;
-  --bg-alt: #0b0f1d;
+  --bg: #080b12;
+  --bg-alt: #0c0f18;
 
-  --card: rgba(16, 21, 38, 0.7);
-  --card-solid: #101526;
+  --card: rgba(16, 19, 28, 0.72);
+  --card-solid: #10131c;
 
-  --border: rgba(255, 255, 255, 0.09);
-  --border-hover: rgba(126, 110, 255, 0.45);
+  --border: rgba(255, 255, 255, 0.11);
+  --border-hover: rgba(255, 159, 67, 0.5);
 
-  --text: #f7f8ff;
-  --muted: #999fb3;
-  --muted-light: #c1c6d6;
+  --text: #f9fafc;
+  --muted: #a4aabd;
+  --muted-light: #ced3e2;
 
-  --purple: #806dff;
-  --purple-light: #a599ff;
+  --amber: #ff9f43;
+  --amber-light: #ffc178;
 
-  --cyan: #2be0ff;
   --green: #5dffb3;
 
   --gradient:
     linear-gradient(
       135deg,
-      #8a78ff,
-      #5c9cff 45%,
-      #2ce6ef
+      #ffc178,
+      #ff9f43 45%,
+      #ff7a30
     );
 
   --radius-sm: 14px;
@@ -121,7 +120,7 @@ ul {
   position: absolute;
   inset: 0;
 
-  background: url("./petroglyphs.png") center / cover no-repeat;
+  background: url("./petroglyphs.webp") center / cover no-repeat;
 
   opacity: 0.45;
   pointer-events: none;
@@ -173,15 +172,16 @@ ul {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.055),
-      rgba(255,255,255,0.018)
-    );
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.015)
+    ),
+    var(--card);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
   box-shadow:
-    0 20px 70px rgba(0,0,0,0.25);
+    0 20px 70px rgba(0,0,0,0.3);
 }
 
 .gradient-text {
@@ -215,7 +215,7 @@ ul {
   font-size: 14px;
   font-weight: 700;
 
-  color: var(--purple-light);
+  color: var(--amber-light);
 }
 
 .section-label {
@@ -267,11 +267,11 @@ ul {
 
   border-radius: 50%;
 
-  border: 2px solid rgba(139, 118, 255, 0.8);
+  border: 2px solid rgba(255, 159, 67, 0.8);
 
   box-shadow:
-    0 0 0 6px rgba(128, 109, 255, 0.06),
-    0 0 35px rgba(128, 109, 255, 0.25),
+    0 0 0 6px rgba(255, 159, 67, 0.06),
+    0 0 35px rgba(255, 159, 67, 0.25),
     0 20px 50px rgba(0, 0, 0, 0.4);
 
   transition:
@@ -283,8 +283,8 @@ ul {
   transform: scale(1.04) rotate(2deg);
 
   box-shadow:
-    0 0 0 7px rgba(128, 109, 255, 0.08),
-    0 0 50px rgba(128, 109, 255, 0.4),
+    0 0 0 7px rgba(255, 159, 67, 0.08),
+    0 0 50px rgba(255, 159, 67, 0.4),
     0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -303,8 +303,8 @@ ul {
 
   background: linear-gradient(
     135deg,
-    #5c9cff,
-    #806dff
+    #ffb648,
+    #ff7a30
   );
 
   filter: blur(35px);
@@ -358,8 +358,7 @@ ul {
     width: 105px;
     height: 105px;
 
-    top: -50px;
-    right: 10px;
+    top: -120px;
   }
 
   .avatar-glow {
@@ -425,7 +424,7 @@ ul {
   top: 0;
   right: 5%;
 
-  background: rgba(106, 82, 255, 0.11);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .orb-two {
@@ -435,7 +434,7 @@ ul {
   bottom: 10%;
   left: -120px;
 
-  background: rgba(40, 214, 255, 0.07);
+  background: rgba(120, 150, 200, 0.04);
 }
 
 .orb-three {
@@ -445,7 +444,7 @@ ul {
   top: 50%;
   right: -80px;
 
-  background: rgba(99, 255, 207, 0.05);
+  background: rgba(93, 255, 179, 0.035);
 }
 
 #cursor-glow {
@@ -467,12 +466,34 @@ ul {
   background:
     radial-gradient(
       circle,
-      rgba(121, 104, 255, 0.8),
+      rgba(255, 159, 67, 0.8),
       transparent 65%
     );
 
   transition:
     opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 3px;
+
+  z-index: 1200;
+
+  background: var(--gradient);
+
+  box-shadow: 0 0 12px rgba(255, 159, 67, 0.55);
+
+  transition: width 0.1s linear;
 }
 
 
@@ -519,7 +540,7 @@ ul {
 .logo-symbol {
   font-family: monospace;
 
-  color: var(--purple-light);
+  color: var(--amber-light);
 }
 
 .nav-links {
@@ -564,6 +585,18 @@ ul {
   width: 100%;
 }
 
+.nav-links a.active {
+  color: var(--amber-light);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.mobile-menu a.active {
+  color: var(--amber-light);
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -602,7 +635,7 @@ ul {
   color: white;
 
   background:
-    rgba(125, 108, 255, 0.12);
+    rgba(255, 159, 67, 0.12);
 }
 
 .mobile-menu-button {
@@ -712,7 +745,7 @@ ul {
   font-weight: 700;
   letter-spacing: 2.2px;
 
-  color: var(--purple-light);
+  color: var(--amber-light);
 }
 
 .hero-title {
@@ -782,19 +815,19 @@ ul {
   background:
     linear-gradient(
       135deg,
-      #7460ff,
-      #5f8cff
+      #ff9f43,
+      #ff6f1f
     );
 
   box-shadow:
-    0 12px 35px rgba(101, 85, 255, 0.22);
+    0 12px 35px rgba(255, 122, 48, 0.25);
 }
 
 .button-primary:hover {
   transform: translateY(-3px);
 
   box-shadow:
-    0 17px 45px rgba(101, 85, 255, 0.32);
+    0 17px 45px rgba(255, 122, 48, 0.35);
 }
 
 .button-secondary {
@@ -884,7 +917,7 @@ ul {
 
   box-shadow:
     0 35px 100px rgba(0,0,0,0.42),
-    0 0 80px rgba(96, 81, 255, 0.07);
+    0 0 80px rgba(255, 154, 60, 0.08);
 }
 
 .terminal-card::before {
@@ -957,7 +990,7 @@ ul {
 .terminal-header > i {
   justify-self: end;
 
-  color: var(--purple-light);
+  color: var(--amber-light);
 }
 
 .terminal-body {
@@ -1000,7 +1033,7 @@ ul {
 }
 
 .terminal-prompt {
-  color: #56e6ff;
+  color: #ffb057;
 }
 
 .terminal-output {
@@ -1023,7 +1056,7 @@ ul {
     5px 8px;
 
   border:
-    1px solid rgba(133, 116, 255, 0.12);
+    1px solid rgba(255, 159, 67, 0.14);
 
   border-radius:
     7px;
@@ -1032,15 +1065,15 @@ ul {
     10px;
 
   color:
-    #b8b0ff;
+    #ffd3a0;
 
   background:
-    rgba(118,96,255,0.06);
+    rgba(255,159,67,0.07);
 }
 
 .terminal-current {
   color:
-    #d7d4ff;
+    #ffe8cf;
 }
 
 .terminal-cursor {
@@ -1053,7 +1086,7 @@ ul {
     15px;
 
   background:
-    var(--purple-light);
+    var(--amber-light);
 
   animation:
     cursor-blink 1s infinite;
@@ -1116,7 +1149,7 @@ ul {
 
 .floating-chip i {
   color:
-    var(--purple-light);
+    var(--amber-light);
 }
 
 .chip-one {
@@ -1238,7 +1271,7 @@ ul {
     0;
 
   color:
-    #6456d6;
+    #c9762f;
 }
 
 @keyframes tech-scroll {
@@ -1374,16 +1407,16 @@ ul {
     center;
 
   border:
-    1px solid rgba(128,109,255,0.14);
+    1px solid rgba(255,159,67,0.16);
 
   border-radius:
     12px;
 
   color:
-    var(--purple-light);
+    var(--amber-light);
 
   background:
-    rgba(128,109,255,0.07);
+    rgba(255,159,67,0.08);
 }
 
 .stat-card h3 {
@@ -1471,7 +1504,7 @@ ul {
     36px;
 
   border:
-    1px solid rgba(127,109,255,0.16);
+    1px solid rgba(255,159,67,0.18);
 
   border-radius:
     13px;
@@ -1480,10 +1513,10 @@ ul {
     17px;
 
   color:
-    var(--purple-light);
+    var(--amber-light);
 
   background:
-    rgba(127,109,255,0.07);
+    rgba(255,159,67,0.08);
 }
 
 .skill-index {
@@ -1619,7 +1652,7 @@ ul {
   background:
     linear-gradient(
       to bottom,
-      rgba(128,109,255,0.6),
+      rgba(255,159,67,0.6),
       transparent
     );
 }
@@ -1642,10 +1675,10 @@ ul {
     50%;
 
   background:
-    var(--purple-light);
+    var(--amber-light);
 
   box-shadow:
-    0 0 0 6px rgba(128,109,255,0.09);
+    0 0 0 6px rgba(255,159,67,0.1);
 }
 
 .experience-date {
@@ -1697,7 +1730,7 @@ ul {
     1.7px;
 
   color:
-    var(--purple-light) !important;
+    var(--amber-light) !important;
 }
 
 .experience-content h3 {
@@ -1786,7 +1819,7 @@ ul {
     9px;
 
   color:
-    var(--purple-light);
+    var(--amber-light);
 }
 
 .experience-stack {
@@ -1866,7 +1899,7 @@ ul {
     0;
 
   background:
-    rgba(115,98,255,0.1);
+    rgba(255,159,67,0.1);
 
   filter:
     blur(45px);
@@ -1904,9 +1937,9 @@ ul {
   background:
     linear-gradient(
       135deg,
-      rgba(116,96,255,0.13),
-      rgba(20,25,44,0.62) 45%,
-      rgba(30,205,220,0.035)
+      rgba(255,159,67,0.1),
+      rgba(16,19,28,0.7) 45%,
+      rgba(255,122,48,0.025)
     );
 }
 
@@ -1964,13 +1997,13 @@ ul {
 
 .project-badge.featured {
   color:
-    #c3bbff;
+    #ffd3a0;
 
   background:
-    rgba(127,109,255,0.1);
+    rgba(255,159,67,0.1);
 
   border:
-    1px solid rgba(127,109,255,0.2);
+    1px solid rgba(255,159,67,0.22);
 }
 
 .project-status {
@@ -1999,7 +2032,7 @@ ul {
     28px;
 
   border:
-    1px solid rgba(127,109,255,0.17);
+    1px solid rgba(255,159,67,0.18);
 
   border-radius:
     16px;
@@ -2008,10 +2041,10 @@ ul {
     22px;
 
   color:
-    var(--purple-light);
+    var(--amber-light);
 
   background:
-    rgba(127,109,255,0.08);
+    rgba(255,159,67,0.08);
 }
 
 .project-small-icon {
@@ -2032,7 +2065,7 @@ ul {
     1.9px;
 
   color:
-    var(--purple-light);
+    var(--amber-light);
 }
 
 .project-card h3 {
@@ -2137,6 +2170,44 @@ ul {
     26px;
 }
 
+.project-link {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 20px;
+
+  padding: 11px 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: var(--amber-light);
+
+  background: rgba(255, 159, 67, 0.06);
+
+  transition: 0.25s ease;
+}
+
+.project-link i {
+  font-size: 10px;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+
+  color: white;
+
+  border-color: var(--border-hover);
+
+  background: rgba(255, 159, 67, 0.14);
+}
+
 
 /* =========================================================
    PHILOSOPHY
@@ -2183,7 +2254,7 @@ ul {
     1;
 
   color:
-    rgba(128,109,255,0.08);
+    rgba(255,159,67,0.1);
 }
 
 .philosophy-card p {
@@ -2278,7 +2349,7 @@ ul {
     11px;
 
   color:
-    var(--purple-light);
+    var(--amber-light);
 }
 
 .currently-card h3 {
@@ -2332,7 +2403,7 @@ ul {
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(122,104,255,0.14),
+      rgba(255,159,67,0.11),
       transparent 40%
     ),
     rgba(255,255,255,0.022);
@@ -2479,7 +2550,7 @@ ul {
     var(--border-hover);
 
   background:
-    rgba(127,109,255,0.07);
+    rgba(255,159,67,0.08);
 }
 
 .contact-links {
@@ -2572,7 +2643,7 @@ ul {
     0 3px;
 
   color:
-    #8170ff;
+    #ff9f43;
 }
 
 .back-top {
