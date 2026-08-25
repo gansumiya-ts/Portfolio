@@ -1,4 +1,11 @@
 /* =========================================================
+   ENABLE SCROLL-REVEAL (progressive enhancement)
+========================================================= */
+
+document.documentElement.classList.add("js-loaded");
+
+
+/* =========================================================
    YEAR
 ========================================================= */
 
@@ -27,10 +34,18 @@ if (menuButton && mobileMenu) {
 
     document.body.classList.toggle("menu-open");
 
+    const isActive =
+      mobileMenu.classList.contains("active");
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      isActive ? "true" : "false"
+    );
+
     const icon =
       menuButton.querySelector("i");
 
-    if (mobileMenu.classList.contains("active")) {
+    if (isActive) {
 
       icon.classList.remove("fa-bars");
       icon.classList.add("fa-xmark");
@@ -54,6 +69,11 @@ if (menuButton && mobileMenu) {
         mobileMenu.classList.remove("active");
 
         document.body.classList.remove("menu-open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
 
         const icon =
           menuButton.querySelector("i");
@@ -345,7 +365,7 @@ window.addEventListener(
 
 
 /* =========================================================
-   DESKTOP CARD EFFECT
+   DESKTOP CARD EFFECT (tilt + cursor glow)
 ========================================================= */
 
 if (
@@ -356,7 +376,7 @@ if (
 
   const cards =
     document.querySelectorAll(
-      ".project-card"
+      ".project-card, .skill-card, .currently-card"
     );
 
 
@@ -377,12 +397,23 @@ if (
           event.clientY -
           rect.top;
 
+        const rotateY =
+          ((x / rect.width) - 0.5) * 8;
+
+        const rotateX =
+          ((y / rect.height) - 0.5) * -8;
+
+        card.style.transition =
+          "transform 0.06s linear";
+
+        card.style.transform =
+          `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
 
         card.style.background =
           `
           radial-gradient(
             400px circle at ${x}px ${y}px,
-            rgba(126,110,255,0.09),
+            rgba(255,159,67,0.1),
             transparent 45%
           ),
           linear-gradient(
@@ -400,6 +431,11 @@ if (
       "mouseleave",
       () => {
 
+        card.style.transition =
+          "transform 0.4s ease";
+
+        card.style.transform = "";
+
         card.style.background = "";
 
       }
@@ -408,6 +444,174 @@ if (
   });
 
 }
+
+
+/* =========================================================
+   MAGNETIC BUTTONS
+========================================================= */
+
+if (
+  window.matchMedia(
+    "(pointer: fine)"
+  ).matches
+) {
+
+  document
+    .querySelectorAll(".button")
+    .forEach((button) => {
+
+      button.addEventListener(
+        "mousemove",
+        (event) => {
+
+          const rect =
+            button.getBoundingClientRect();
+
+          const x =
+            event.clientX -
+            rect.left -
+            rect.width / 2;
+
+          const y =
+            event.clientY -
+            rect.top -
+            rect.height / 2;
+
+          button.style.transition =
+            "transform 0.06s linear";
+
+          button.style.transform =
+            `translate(${x * 0.18}px, ${(y * 0.35) - 3}px)`;
+
+        }
+      );
+
+
+      button.addEventListener(
+        "mouseleave",
+        () => {
+
+          button.style.transition =
+            "transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)";
+
+          button.style.transform = "";
+
+        }
+      );
+
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+const scrollProgress =
+  document.getElementById("scroll-progress");
+
+
+function updateScrollProgress() {
+
+  if (!scrollProgress) {
+    return;
+  }
+
+  const docHeight =
+    document.documentElement.scrollHeight -
+    window.innerHeight;
+
+  const percent =
+    docHeight > 0
+      ? (window.scrollY / docHeight) * 100
+      : 0;
+
+  scrollProgress.style.width = `${percent}%`;
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  updateScrollProgress,
+  { passive: true }
+);
+
+updateScrollProgress();
+
+
+/* =========================================================
+   ACTIVE NAV LINK
+========================================================= */
+
+const navLinkGroups = {};
+
+document
+  .querySelectorAll(
+    ".nav-links a[href^='#'], .mobile-menu a[href^='#']"
+  )
+  .forEach((link) => {
+
+    const id =
+      link.getAttribute("href").slice(1);
+
+    if (!navLinkGroups[id]) {
+      navLinkGroups[id] = [];
+    }
+
+    navLinkGroups[id].push(link);
+
+  });
+
+
+const trackedSections =
+  document.querySelectorAll("section[id]");
+
+
+const activeSectionObserver =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const links =
+          navLinkGroups[entry.target.id];
+
+        if (!links) {
+          return;
+        }
+
+        document
+          .querySelectorAll(
+            ".nav-links a, .mobile-menu a"
+          )
+          .forEach((link) => {
+            link.classList.remove("active");
+          });
+
+        links.forEach((link) => {
+          link.classList.add("active");
+        });
+
+      });
+
+    },
+
+    {
+      rootMargin: "-45% 0px -50% 0px",
+      threshold: 0
+    }
+  );
+
+
+trackedSections.forEach((section) => {
+  activeSectionObserver.observe(section);
+});
 
 
 /* =========================================================
