@@ -2024,53 +2024,5 @@
 
   <script src="script.js"></script>
 
-  <script>
-    (() => {
-      let pointerClientX = -500;
-      let pointerClientY = -500;
-
-      const updatePetroglyphReveal = () => {
-        const pageX = pointerClientX + window.scrollX;
-        const pageY = pointerClientY + window.scrollY;
-
-        document.documentElement.style.setProperty(
-          "--mouse-x",
-          `${pageX}px`
-        );
-
-        document.documentElement.style.setProperty(
-          "--mouse-y",
-          `${pageY}px`
-        );
-      };
-
-      const updatePointer = (event) => {
-        pointerClientX = event.clientX;
-        pointerClientY = event.clientY;
-        updatePetroglyphReveal();
-      };
-
-      document.addEventListener("pointermove", updatePointer, {
-        passive: true,
-      });
-
-      document.addEventListener("pointerdown", updatePointer, {
-        passive: true,
-      });
-
-      window.addEventListener("scroll", updatePetroglyphReveal, {
-        passive: true,
-      });
-
-      document.addEventListener("pointerout", (event) => {
-        if (event.pointerType === "mouse" && !event.relatedTarget) {
-          pointerClientX = -500;
-          pointerClientY = -500;
-          updatePetroglyphReveal();
-        }
-      });
-    })();
-  </script>
-
 </body>
 </html>
