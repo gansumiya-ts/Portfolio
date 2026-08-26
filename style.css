@@ -120,24 +120,23 @@ ul {
   position: absolute;
   inset: 0;
 
-  background: url("./petroglyphs.png") center / cover no-repeat;
+  width: 100%;
+  min-height: 100%;
+
+  background-image: url("./petroglyphs.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  /* Бүтэн website-ийн өргөн, өндөрт сунгана */
+  background-size: 100% 100%;
 
   opacity: 0.45;
   pointer-events: none;
+  z-index: 0;
 
-  -webkit-mask-image: radial-gradient(
-    circle 180px at var(--mouse-x) var(--mouse-y),
-    black 0%,
-    rgba(0, 0, 0, 0.8) 30%,
-    transparent 75%
-  );
-
-  mask-image: radial-gradient(
-    circle 180px at var(--mouse-x) var(--mouse-y),
-    black 0%,
-    rgba(0, 0, 0, 0.8) 30%,
-    transparent 75%
-  );
+  /* Mouse орчимд л харагдуулж байсан mask-ийг болиулна */
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 
@@ -2598,9 +2597,9 @@ ul {
    FOOTER
 ========================================================= */
 
-.footer {
-  border-top:
-    1px solid rgba(255,255,255,0.05);
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-container {
