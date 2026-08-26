@@ -152,19 +152,131 @@ document
   });
 
 /* =========================================================
-   light mouse ANIMATION
+   POINTER POSITION
+
+   --mouse-x / --mouse-y:
+     viewport coordinates for fixed cursor effects.
+
+   --petro-x / --petro-y:
+     full-document coordinates for the absolute petroglyph
+     layer. Works after scrolling and supports mouse + touch.
 ========================================================= */
-document.addEventListener("mousemove", (e) => {
+
+let pointerClientX = -500;
+let pointerClientY = -500;
+let pointerAnimationFrame = null;
+let touchHideTimer = null;
+
+function renderPointerPosition() {
+  pointerAnimationFrame = null;
+
+  const documentX =
+    pointerClientX + window.scrollX;
+
+  const documentY =
+    pointerClientY + window.scrollY;
+
   document.documentElement.style.setProperty(
     "--mouse-x",
-    `${e.clientX}px`
+    `${pointerClientX}px`
   );
 
   document.documentElement.style.setProperty(
     "--mouse-y",
-    `${e.clientY}px`
+    `${pointerClientY}px`
   );
-});
+
+  document.documentElement.style.setProperty(
+    "--petro-x",
+    `${documentX}px`
+  );
+
+  document.documentElement.style.setProperty(
+    "--petro-y",
+    `${documentY}px`
+  );
+}
+
+function schedulePointerRender() {
+  if (pointerAnimationFrame !== null) {
+    return;
+  }
+
+  pointerAnimationFrame =
+    window.requestAnimationFrame(
+      renderPointerPosition
+    );
+}
+
+function updatePointerPosition(event) {
+  pointerClientX = event.clientX;
+  pointerClientY = event.clientY;
+
+  if (touchHideTimer) {
+    clearTimeout(touchHideTimer);
+    touchHideTimer = null;
+  }
+
+  schedulePointerRender();
+}
+
+document.addEventListener(
+  "pointermove",
+  updatePointerPosition,
+  { passive: true }
+);
+
+document.addEventListener(
+  "pointerdown",
+  updatePointerPosition,
+  { passive: true }
+);
+
+window.addEventListener(
+  "scroll",
+  schedulePointerRender,
+  { passive: true }
+);
+
+document.addEventListener(
+  "pointerout",
+  (event) => {
+    if (
+      event.pointerType === "mouse" &&
+      !event.relatedTarget
+    ) {
+      pointerClientX = -500;
+      pointerClientY = -500;
+      schedulePointerRender();
+    }
+  }
+);
+
+function hideTouchReveal(event) {
+  if (event.pointerType === "mouse") {
+    return;
+  }
+
+  touchHideTimer = setTimeout(() => {
+    pointerClientX = -500;
+    pointerClientY = -500;
+    schedulePointerRender();
+  }, 600);
+}
+
+document.addEventListener(
+  "pointerup",
+  hideTouchReveal,
+  { passive: true }
+);
+
+document.addEventListener(
+  "pointercancel",
+  hideTouchReveal,
+  { passive: true }
+);
+
+schedulePointerRender();
 
 /* =========================================================
    CURSOR GLOW
