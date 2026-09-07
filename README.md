@@ -1,26 +1,25 @@
-# Gansumiya Portfolio
+# enhancement/interactive-design
 
-A simple one-page portfolio website built with HTML, CSS, and JavaScript.
+This branch adds interactive UI improvements to the portfolio:
 
-## Files
-- `index.html`
-- `style.css`
-- `script.js`
+- Typewriter hero intro
+- Reveal-on-scroll animations
+- Dark / light theme toggle (saved to localStorage)
+- Project cards that open a modal with details
+- Smooth scrolling and small contact form demo
 
-## How to run locally
-Just open `index.html` in your browser.
+Files added/updated:
+- index.html
+- styles.css
+- script.js
+- images/placeholder.svg
 
-## How to publish on GitHub Pages
-1. Create a new GitHub repository.
-2. Upload these files to the repository root.
-3. Go to **Settings** -> **Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/root**
-5. Save.
-6. Your site will be published on a GitHub Pages URL.
+Preview locally:
+1. Clone the repo and checkout the branch:
+   git fetch origin enhancement/interactive-design
+   git checkout enhancement/interactive-design
+2. Open index.html in your browser or serve with a static server (e.g., `npx http-server`).
 
-## Suggested repo name
-- `portfolio`
-- `gansumiya-portfolio`
+Notes:
+- I used a placeholder SVG for project images at `images/placeholder.svg`. Replace with your real screenshots and update the `data-image` attributes on project cards.
+- I committed everything in one atomic commit. If you'd like the changes split into multiple commits (one per feature), tell me and I can split them.
