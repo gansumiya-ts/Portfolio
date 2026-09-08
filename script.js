@@ -289,7 +289,7 @@ const cursorGlow =
 if (
   cursorGlow &&
   window.matchMedia(
-    "(pointer: fine)"
+    "(pointer: fine) and (prefers-reduced-motion: no-preference)"
   ).matches
 ) {
 
@@ -327,118 +327,6 @@ if (
   );
 
 }
-
-
-/* =========================================================
-   TERMINAL TYPING
-========================================================= */
-
-const terminalText =
-  document.getElementById("terminal-text");
-
-
-const terminalMessages = [
-
-  "building scalable systems",
-
-  "processing real-time events",
-
-  "automating data workflows",
-
-  "deploying backend services",
-
-  "building AI agents"
-
-];
-
-
-let terminalMessageIndex = 0;
-let terminalCharacterIndex = 0;
-let terminalDeleting = false;
-
-
-function terminalType() {
-
-  if (!terminalText) {
-    return;
-  }
-
-
-  const currentMessage =
-    terminalMessages[
-      terminalMessageIndex
-    ];
-
-
-  if (!terminalDeleting) {
-
-    terminalCharacterIndex++;
-
-    terminalText.textContent =
-      currentMessage.substring(
-        0,
-        terminalCharacterIndex
-      );
-
-
-    if (
-      terminalCharacterIndex ===
-      currentMessage.length
-    ) {
-
-      terminalDeleting = true;
-
-      setTimeout(
-        terminalType,
-        1700
-      );
-
-      return;
-
-    }
-
-  } else {
-
-    terminalCharacterIndex--;
-
-    terminalText.textContent =
-      currentMessage.substring(
-        0,
-        terminalCharacterIndex
-      );
-
-
-    if (
-      terminalCharacterIndex === 0
-    ) {
-
-      terminalDeleting = false;
-
-      terminalMessageIndex =
-        (
-          terminalMessageIndex + 1
-        ) %
-        terminalMessages.length;
-
-    }
-
-  }
-
-
-  setTimeout(
-    terminalType,
-    terminalDeleting
-      ? 30
-      : 55
-  );
-
-}
-
-
-setTimeout(
-  terminalType,
-  900
-);
 
 
 /* =========================================================
@@ -482,7 +370,7 @@ window.addEventListener(
 
 if (
   window.matchMedia(
-    "(pointer: fine)"
+    "(pointer: fine) and (prefers-reduced-motion: no-preference)"
   ).matches
 ) {
 
@@ -564,7 +452,7 @@ if (
 
 if (
   window.matchMedia(
-    "(pointer: fine)"
+    "(pointer: fine) and (prefers-reduced-motion: no-preference)"
   ).matches
 ) {
 
@@ -703,11 +591,11 @@ const activeSectionObserver =
             ".nav-links a, .mobile-menu a"
           )
           .forEach((link) => {
-            link.classList.remove("active");
+            link.classList.remove("active"); link.removeAttribute("aria-current");
           });
 
         links.forEach((link) => {
-          link.classList.add("active");
+          link.classList.add("active"); link.setAttribute("aria-current", "location");
         });
 
       });
@@ -770,7 +658,7 @@ document
 
             top: position,
 
-            behavior: "smooth"
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"
 
           });
 
@@ -780,3 +668,4 @@ document
     );
 
   });
+
