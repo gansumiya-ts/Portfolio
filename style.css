@@ -925,10 +925,7 @@ footer {
 
   border-radius: 25px;
 
-  transform:
-    perspective(1000px)
-    rotateY(-3deg)
-    rotateX(1deg);
+  transform: none;
 
   box-shadow:
     0 35px 100px rgba(0,0,0,0.42),
